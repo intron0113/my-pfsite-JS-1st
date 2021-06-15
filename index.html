@@ -22,7 +22,7 @@
       <header class="header">
         <div class='header__inner'>
           <div class="logo">
-            <img src="images/logo.svg" alt="" class="logo__imag">
+            <!-- <img src="images/logo.svg" alt="" class="logo__imag"> -->
             <span class="logo__shota">SHOTA'S</span>
             <span class="logo__portforio">PortFolio</span>
           </div>
@@ -51,7 +51,7 @@
           <section class="profile">
             <div class="profile__inner">
               <div class="profile__img cover-slide">
-                <img class="img-zoom" src="images/image-1.jpg" alt="">
+                <img class="img-zoom" src="images/yopiken.png" alt="">
               </div>
               <div class="profile__texts">
                 <div class="profile__texts-inner">
@@ -74,6 +74,141 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </section>
+          <section class="skills">
+            <div>
+              <h2 class="main-title">Skills</h2>
+              <p class="sub-title">スキル</p>
+            </div>
+            <div class="skills__inner">
+              <div class="skills__item" data-proficiency="50">
+                <!-- スキル全体を囲う要素。熟練度を0~100の間で記入 -->
+
+                <div class="skill-info">
+                  <p class="skill-name">HTML&CSS</p><!-- 名前 -->
+
+                  <p class="skill-percentage">
+                    <span class="countup"></span>%
+                    <!-- 熟練度の数値をJSで動的に表示 -->
+                  </p>
+                </div>
+
+                <div class="skill-bar-container">
+                  <!-- スキルバーの親要素 -->
+                  <div class="skill-bar"></div><!-- スキルバー本体 -->
+                </div>
+
+              </div>
+              <div class="skills__item" data-proficiency="50">
+                <!-- スキル全体を囲う要素。熟練度を0~100の間で記入 -->
+
+                <div class="skill-info">
+                  <p class="skill-name">Sass</p><!-- 名前 -->
+
+                  <p class="skill-percentage">
+                    <span class="countup"></span>%
+                    <!-- 熟練度の数値をJSで動的に表示 -->
+                  </p>
+                </div>
+
+                <div class="skill-bar-container">
+                  <!-- スキルバーの親要素 -->
+                  <div class="skill-bar"></div><!-- スキルバー本体 -->
+                </div>
+
+              </div>
+              <div class="skills__item" data-proficiency="60">
+                <!-- スキル全体を囲う要素。熟練度を0~100の間で記入 -->
+
+                <div class="skill-info">
+                  <p class="skill-name">JavaScript</p><!-- 名前 -->
+
+                  <p class="skill-percentage">
+                    <span class="countup"></span>%
+                    <!-- 熟練度の数値をJSで動的に表示 -->
+                  </p>
+                </div>
+
+                <div class="skill-bar-container">
+                  <!-- スキルバーの親要素 -->
+                  <div class="skill-bar"></div><!-- スキルバー本体 -->
+                </div>
+
+              </div>
+              <div class="skills__item" data-proficiency="10">
+                <!-- スキル全体を囲う要素。熟練度を0~100の間で記入 -->
+
+                <div class="skill-info">
+                  <p class="skill-name">Vue.js</p><!-- 名前 -->
+
+                  <p class="skill-percentage">
+                    <span class="countup"></span>%
+                    <!-- 熟練度の数値をJSで動的に表示 -->
+                  </p>
+                </div>
+
+                <div class="skill-bar-container">
+                  <!-- スキルバーの親要素 -->
+                  <div class="skill-bar"></div><!-- スキルバー本体 -->
+                </div>
+
+              </div>
+              <div class="skills__item" data-proficiency="10">
+                <!-- スキル全体を囲う要素。熟練度を0~100の間で記入 -->
+
+                <div class="skill-info">
+                  <p class="skill-name">Node.js</p><!-- 名前 -->
+
+                  <p class="skill-percentage">
+                    <span class="countup"></span>%
+                    <!-- 熟練度の数値をJSで動的に表示 -->
+                  </p>
+                </div>
+
+                <div class="skill-bar-container">
+                  <!-- スキルバーの親要素 -->
+                  <div class="skill-bar"></div><!-- スキルバー本体 -->
+                </div>
+
+              </div>
+              <div class="skills__item" data-proficiency="60">
+                <!-- スキル全体を囲う要素。熟練度を0~100の間で記入 -->
+
+                <div class="skill-info">
+                  <p class="skill-name">git/hub</p><!-- 名前 -->
+
+                  <p class="skill-percentage">
+                    <span class="countup"></span>%
+                    <!-- 熟練度の数値をJSで動的に表示 -->
+                  </p>
+                </div>
+
+                <div class="skill-bar-container">
+                  <!-- スキルバーの親要素 -->
+                  <div class="skill-bar"></div><!-- スキルバー本体 -->
+                </div>
+
+              </div>
+              <div class="skills__item" data-proficiency="10">
+                <!-- スキル全体を囲う要素。熟練度を0~100の間で記入 -->
+
+                <div class="skill-info">
+                  <p class="skill-name">Docer</p><!-- 名前 -->
+
+                  <p class="skill-percentage">
+                    <span class="countup"></span>%
+                    <!-- 熟練度の数値をJSで動的に表示 -->
+                  </p>
+                </div>
+
+                <div class="skill-bar-container">
+                  <!-- スキルバーの親要素 -->
+                  <div class="skill-bar"></div><!-- スキルバー本体 -->
+                </div>
+
+              </div>
+
             </div>
           </section>
           <section class="works">
@@ -123,12 +258,12 @@
         </main>
       </div>
 
-      <button class="btn float">Button</button>
+      <!-- <button class="btn float">Button</button>
       <button class="btn filled">Button</button>
       <button class="btn letter-spacing">Button</button>
       <button class="btn shadow">Button</button>
       <button class="btn solid">Button</button>
-      <button class="btn slide-bg">Button</button>
+      <button class="btn slide-bg">Button</button> -->
 
 
       <footer>
@@ -199,6 +334,7 @@
   <script src="scripts/libs/scroll.js"></script>
   <script src="scripts/libs/text-animation.js"></script>
   <script src="scripts/libs/mobile-menu.js"></script>
+  <script src="scripts/libs/skills.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 

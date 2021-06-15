@@ -17,9 +17,16 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 }
 
 .profile {
+  &__inner{
+    padding: 50px;
+  }
   &__texts,
   &__img {
     flex-basis: 47%;
-    
+  }
+  
+  &__texts{
+    display: flex;
+    align-items: flex-end;
   }
 }

@@ -672,6 +672,59 @@
   padding-top: 50%;
 }
 
+/* スキル全体を囲うdiv */
+.skill {
+  margin: 30px 0;
+  /* 上下のマージンを指定 */
+}
+
+/* スキルの情報 */
+.skill-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* スキルの熟練度（パーセンテージ） */
+.skill-percentage {
+  opacity: 0;
+  /* 初期状態では透明に */
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+/* スキルバーの親要素 */
+.skill-bar-container {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  /* スキルバーの高さ */
+  background-color: #f3f3f3;
+  /* スキルバーの背景色 */
+  overflow: hidden;
+}
+
+/* スキルバー本体 */
+.skill-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  /* 初期状態では0 */
+  background-color: #34e8d7;
+  /* スキルバーの色 */
+  -webkit-transition: width 3s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: width 3s cubic-bezier(0.22, 1, 0.36, 1);
+  /* スキルバーが伸びる速度を調整 */
+}
+
 /******************************************************************
 
 Stylesheet: ベーススタイル
@@ -710,7 +763,7 @@ Stylesheet: ベーススタイル
   font-size: 25px;
 }
 
-.mb-sm, .profile__sub, .works__title {
+.mb-sm, .profile__sub, .profile__img, .works__title {
   margin-bottom: 16px !important;
 }
 
@@ -718,7 +771,7 @@ Stylesheet: ベーススタイル
   margin-bottom: 80px !important;
 }
 
-.pb-sm {
+.pb-sm, .profile__texts {
   padding-bottom: 16px !important;
 }
 
@@ -751,7 +804,20 @@ Stylesheet: ベーススタイル
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 15px;
+  margin-top: 15px;
   background-color: #eaebe6;
+}
+
+.profile__img {
+  height: 300px;
+}
+
+.profile__img > img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .main-title {
@@ -891,9 +957,20 @@ Stylesheet: 600px以上のタブレットやモニタで適用
         flex-basis: 50%;
     margin-bottom: 60px;
   }
+  .profile__inner {
+    padding: 50px;
+  }
   .profile__texts, .profile__img {
     -ms-flex-preferred-size: 47%;
         flex-basis: 47%;
+  }
+  .profile__texts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
@@ -927,6 +1004,12 @@ Stylesheet: 960px以上のモニタで適用
   .mobile-menu__btn {
     display: none;
   }
+  .profile__img {
+    height: 400px;
+  }
+  .profile__description {
+    margin-bottom: 40px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -935,8 +1018,8 @@ Stylesheet: 960px以上のモニタで適用
 Stylesheet: 1280px以上のモニタで適用
 
 ******************************************************************/
-  h1 {
-    color: blue;
+  .profile__inner {
+    padding: 50px 150px;
   }
 }
 
