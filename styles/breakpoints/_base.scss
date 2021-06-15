@@ -53,8 +53,37 @@ Stylesheet: ベーススタイル
   max-width: 1070px;
 }
 
-.Works {
+.flex{
+  display: flex;
+  flex-direction: column;
+}
+
+.skyblue{
+  color: $cBlue;
+}
+
+.profile{
   @extend .content-width;
+
+  &__inner{
+    @extend .flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: $cBgGray;
+  }
+
+  &__sub{
+    @extend .mb-sm;
+  }
+}
+
+.works {
+  @extend .content-width;
+
+&__inner{
+ @extend .flex;
+ 
+}
 
   &__title{
     @extend .font-lr;

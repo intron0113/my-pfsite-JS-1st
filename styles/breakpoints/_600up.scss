@@ -4,7 +4,22 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
 
-.flex{
+.flex {
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.works {
+  &__item {
+    flex-basis: 50%;
+    margin-bottom: 60px;
+  }
+}
+
+.profile {
+  &__texts,
+  &__img {
+    flex-basis: 47%;
+    
+  }
 }
