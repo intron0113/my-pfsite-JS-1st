@@ -1,0 +1,146 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+
+
+.body {
+  font-family: 'kameron', 'Noto Sans JP', 'sans-self';
+}
+
+.main-image{
+  margin-top: 100px;
+  width: 100%;
+  height: 800px; 
+  object-fit: cover;
+}
+
+.img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.font-sm {
+  font-size: 14px;
+}
+.font-md {
+  font-size: 17px;
+}
+.font-lr {
+  font-size: 17px;
+}
+.font-lg {
+  font-size: 25px;
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+.pb-lg {
+  padding-bottom: 16px !important;
+}
+
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1070px;
+}
+
+.Works {
+  @extend .content-width;
+
+  &__title{
+    @extend .font-lr;
+    @extend .mb-sm;
+  }
+}
+
+.main-title {
+  @extend .font-lg;
+  font-weight: 600;
+  margin-left: 0;
+
+}
+.sub-title {
+  @extend .font-sm;
+  color: $cSubTitle;
+
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  padding-top: $navHeight;
+}
+
+#container{
+  background-color: $cWhite;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s,box-shadow0.5s;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $navHeight;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+
+  &.triggered {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  &__nav {
+    display: none;
+    @extend .flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__li {
+    margin-left: 20px;
+
+    & > a {
+      color: $cBlack;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  & .logo {
+    font-size: 38px;
+    justify-content: center;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend .content-width;
+  }
+}
