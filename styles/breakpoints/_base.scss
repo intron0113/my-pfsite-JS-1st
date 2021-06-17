@@ -97,6 +97,7 @@ Stylesheet: ベーススタイル
 
   &__btn {
     text-align: center;
+
   }
 }
 
@@ -283,17 +284,22 @@ main{
   position: fixed;
   top: 70%;
   transform: translateY(-50%);
-  
-  & a ,
-  span{
+  transition: all .3s ease-in;
+  & .tween-animate-title {
     margin: 0 40px;
     color: $cBlack;
     text-decoration: none !important;
     vertical-align: middle;
+    letter-spacing: 2px;
   }
 
   &.left {
-    left: 50px;
+    left: -50px;
+    
+    &.inview{
+
+      left: 50px;
+    }
 
 
     & .side__inner {
@@ -303,7 +309,11 @@ main{
   }
 
   &.right {
-    right: 50px;
+    right: -50px;
+    &.inview{
+      right: 50px;
+    
+    }
 
     & .side__inner {
       transform-origin: top right;
@@ -324,13 +334,13 @@ main{
 
  &.github{
    &::before{
-     background-image: url(../images/twitter.svg);
+     background-image: url(../images/github2.svg);
    }
  }
 
  &.blog{
    &::before{
-     background-image: url(../images/facebook.svg);
+     background-image: url(../images/wordpress.svg);
    }
  }
 }

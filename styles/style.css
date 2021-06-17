@@ -1096,17 +1096,23 @@ main {
   top: 70%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
-.side a,
-.side span {
+.side .tween-animate-title {
   margin: 0 40px;
   color: black;
   text-decoration: none !important;
   vertical-align: middle;
+  letter-spacing: 2px;
 }
 
 .side.left {
+  left: -50px;
+}
+
+.side.left.inview {
   left: 50px;
 }
 
@@ -1118,6 +1124,10 @@ main {
 }
 
 .side.right {
+  right: -50px;
+}
+
+.side.right.inview {
   right: 50px;
 }
 
@@ -1148,11 +1158,11 @@ main {
 }
 
 .icon.github::before {
-  background-image: url(../images/twitter.svg);
+  background-image: url(../images/github2.svg);
 }
 
 .icon.blog::before {
-  background-image: url(../images/facebook.svg);
+  background-image: url(../images/wordpress.svg);
 }
 
 @media (min-width: 480px) {
