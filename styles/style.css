@@ -837,7 +837,7 @@ Stylesheet: ベーススタイル
   font-size: 17px;
 }
 
-.font-lr, .works__title, .skills__title {
+.font-lr, .works__title, .contact__title, .skills__title {
   font-size: 17px;
 }
 
@@ -845,11 +845,11 @@ Stylesheet: ベーススタイル
   font-size: 25px;
 }
 
-.mb-sm, .profile__sub, .profile__img, .works__title, .skills__title {
+.mb-sm, .profile__sub, .profile__img, .works__title, .contact__title, .skills__title {
   margin-bottom: 16px !important;
 }
 
-.mb-lg, .profile, .works, .skills {
+.mb-lg, .profile, .contact, .skills {
   margin-bottom: 80px !important;
 }
 
@@ -861,13 +861,13 @@ Stylesheet: ベーススタイル
   padding-bottom: 16px !important;
 }
 
-.content-width, .profile, .works__header, .works__container, .skills, .header__inner, .footer {
+.content-width, .profile, .works__header, .works__container, .contact__header, .contact__container, .skills, .header__inner, .footer {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
 }
 
-.flex, .profile__inner, .works__container, .skills__inner, .header__nav, .footer__nav, .footer__ul {
+.flex, .profile__inner, .works__container, .contact__container, .skills__inner, .header__nav, .footer__nav, .footer__ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -925,6 +925,37 @@ Stylesheet: ベーススタイル
   z-index: 2;
 }
 
+.contact {
+  padding-top: 80px;
+  background-color: #eaebe6;
+}
+
+.contact__inner {
+  position: relative;
+}
+
+.contact__container {
+  position: relative;
+  z-index: 2;
+}
+
+.contact__item {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.contact__item > a {
+  color: black;
+  text-decoration: none;
+}
+
+.contact .twitter {
+  width: 5rem;
+  height: 5rem;
+  margin-top: 80px;
+}
+
 .main-title {
   font-weight: 600;
   margin-left: 0;
@@ -934,7 +965,7 @@ Stylesheet: ベーススタイル
   color: #535353;
 }
 
-.flex, .profile__inner, .works__container, .skills__inner, .header__nav, .footer__nav, .footer__ul {
+.flex, .profile__inner, .works__container, .contact__container, .skills__inner, .header__nav, .footer__nav, .footer__ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1096,8 +1127,8 @@ main {
   top: 70%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .side .tween-animate-title {
@@ -1182,7 +1213,7 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
-  .flex, .profile__inner, .works__container, .skills__inner, .header__nav, .footer__nav, .footer__ul {
+  .flex, .profile__inner, .works__container, .contact__container, .skills__inner, .header__nav, .footer__nav, .footer__ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1241,13 +1272,13 @@ Stylesheet: 960px以上のモニタで適用
   .font-md {
     font-size: 19px;
   }
-  .font-lr, .works__title, .skills__title {
+  .font-lr, .works__title, .contact__title, .skills__title {
     font-size: 23px;
   }
   .font-lg, .main-title {
     font-size: 36px;
   }
-  .mb-lg, .profile, .works, .skills {
+  .mb-lg, .profile, .contact, .skills {
     margin-bottom: 150px !important;
   }
   .pb-lg, .main-image {

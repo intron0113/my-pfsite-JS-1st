@@ -61,10 +61,10 @@ Stylesheet: ベーススタイル
   color: $cBlue;
 }
 
-.main-image{
+.main-image {
   overflow: hidden;
   @extend .pb-lg;
- }
+}
 
 .profile {
   @extend .content-width;
@@ -97,12 +97,11 @@ Stylesheet: ベーススタイル
 
   &__btn {
     text-align: center;
-
   }
 }
 
 .works {
-  @extend .mb-lg;
+  // @extend .mb-lg;
   &__inner {
     position: relative;
     &::before {
@@ -130,6 +129,47 @@ Stylesheet: ベーススタイル
   &__title {
     @extend .font-lr;
     @extend .mb-sm;
+  }
+}
+.contact {
+  @extend .mb-lg;
+  padding-top: 80px;
+  background-color: $cBgGray;
+  &__inner {
+    position: relative;
+  }
+
+  &__header {
+    @extend .content-width;
+  }
+
+  &__container {
+    @extend .content-width;
+    @extend .flex;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    @extend .font-lr;
+    @extend .mb-sm;
+  }
+
+  &__item {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    
+    & > a {
+      color: $cBlack;
+      text-decoration: none;
+    }
+  }
+
+  & .twitter {
+    width: 5rem;
+    height: 5rem;
+    margin-top: 80px;
   }
 }
 
@@ -166,11 +206,11 @@ Stylesheet: ベーススタイル
   padding-top: $navHeight;
 }
 
-#main-content{
+#main-content {
   position: relative;
   z-index: 0;
 }
-main{
+main {
   position: relative;
   z-index: -1;
 }
@@ -284,7 +324,7 @@ main{
   position: fixed;
   top: 70%;
   transform: translateY(-50%);
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
   & .tween-animate-title {
     margin: 0 40px;
     color: $cBlack;
@@ -295,12 +335,10 @@ main{
 
   &.left {
     left: -50px;
-    
-    &.inview{
 
+    &.inview {
       left: 50px;
     }
-
 
     & .side__inner {
       transform-origin: top left;
@@ -310,9 +348,8 @@ main{
 
   &.right {
     right: -50px;
-    &.inview{
+    &.inview {
       right: 50px;
-    
     }
 
     & .side__inner {
@@ -322,25 +359,25 @@ main{
   }
 }
 
-.icon{
+.icon {
   position: relative;
 
- @include p-base($left: -20px, $top:50%,$width:1em,$height:1em){
-   transform: translateY(-50%);
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: contain;
- }
+  @include p-base($left: -20px, $top: 50%, $width: 1em, $height: 1em) {
+    transform: translateY(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
- &.github{
-   &::before{
-     background-image: url(../images/github2.svg);
-   }
- }
+  &.github {
+    &::before {
+      background-image: url(../images/github2.svg);
+    }
+  }
 
- &.blog{
-   &::before{
-     background-image: url(../images/wordpress.svg);
-   }
- }
+  &.blog {
+    &::before {
+      background-image: url(../images/wordpress.svg);
+    }
+  }
 }
