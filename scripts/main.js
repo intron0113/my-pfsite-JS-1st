@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  
-
-
-  
   const cb = function (el, inview) {
     if (isIntersecting) {
       const ta = new TweenTextAnimation(el);
@@ -21,20 +17,34 @@ document.addEventListener('DOMContentLoaded', function () {
   };
   const so2 = new ScrollObserver('.cover-slide', _inviewAnimation);
 
+  // const header = document.querySelector('.header');
+ 
+  // const so3 = new ScrollObserver('.nav-trigger', _navAnimation, {
+  //   once: false,
+  // });
 
-  const header = document.querySelector('.header');
-const _navAnimation = function(el, inview){
-      if(inview) {
-          header.classList.remove('triggered');
-      } else{
-          header.classList.add('triggered');
-      }
-  }
-const so3 = new ScrollObserver('.nav-trigger', _navAnimation, {once: false});
-
-new MobileMenu();
+  new MobileMenu();
+  new Main();
 });
 
+class Main {
+  constructor() {
+    this.header = document.querySelector('.header');
+    this._observers = [];
+    this._scrollInit();
+  }
 
+  _navAnimation = function (el, inview) {
+    if (inview) {
+      this.header.classList.remove('triggered');
+    } else {
+      this.header.classList.add('triggered');
+    }
+  };
 
-
+  _scrollInit(){
+    this._observers.push(
+      new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {once: false})
+    )
+  }
+}
