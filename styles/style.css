@@ -943,6 +943,7 @@ Stylesheet: ベーススタイル
   display: inline-block;
   text-align: center;
   width: 100%;
+  margin: 80px;
 }
 
 .contact__item > a {
@@ -953,7 +954,6 @@ Stylesheet: ベーススタイル
 .contact .twitter {
   width: 5rem;
   height: 5rem;
-  margin-top: 80px;
 }
 
 .main-title {
