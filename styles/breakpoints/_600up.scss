@@ -1,0 +1,51 @@
+/******************************************************************
+
+Stylesheet: 600px以上のタブレットやモニタで適用
+
+******************************************************************/
+
+.flex {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills {
+  &__item {
+    flex-basis: 47%;
+    margin-bottom: 60px;
+  }
+}
+
+.works {
+  &__item {
+    flex-basis: 47%;
+    margin-bottom: 60px;
+  }
+}
+
+.profile {
+  &__inner{
+    padding: 50px;
+  }
+  &__texts,
+  &__img {
+    flex-basis: 47%;
+  }
+  
+  &__texts{
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.footer{
+  & .logo{
+    justify-content: flex-start;
+  }
+
+  &__li{
+    margin-left: 0;
+    margin-right: 30px;
+  }
+}
